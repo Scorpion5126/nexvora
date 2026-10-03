@@ -3,17 +3,13 @@ services:
     name: nexvora-assessment-platform
     runtime: node
     region: singapore
-    plan: starter
+    plan: free
     buildCommand: npm install --prefix server && npm install --prefix client && npm run build --prefix client
     startCommand: npm start --prefix server
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATA_DIR
-        value: /var/data
+        value: /tmp/data
       - key: JWT_SECRET
         generateValue: true
-    disk:
-      name: assessment-data
-      mountPath: /var/data
-      sizeGB: 1

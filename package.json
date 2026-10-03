@@ -1,0 +1,1 @@
+{"name":"nexvora-assessment-platform","private":true,"version":"10.0.0","scripts":{"build":"npm run build --prefix client","start":"npm start --prefix server"}}
